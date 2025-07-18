@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CP Tracker - LeetCode & Codeforces</title>
+  <title>LeetCode Programming Tracker</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-
 <body>
-
-  <h1>📊 Competitive Programming Tracker</h1>
+  <button class="theme-toggle" onclick="toggleTheme()">🪄 Toggle Theme</button>
+  <h1>📊 LeetCode Programming Tracker</h1>
 
   <div class="form-group">
     <input type="text" id="leetcodeInput" placeholder="LeetCode Username" />
-    <input type="text" id="codeforcesInput" placeholder="Codeforces Username" />
     <button onclick="loadStats()">Get Stats</button>
+    <!-- <button onclick="downloadCSV()">📄 Export CSV</button>
+    <button onclick="downloadPDF()">🧾 Export PDF</button> -->
   </div>
 
   <div class="tracker-section">
-    <!-- LeetCode Card -->
     <div class="card" id="leetcode">
       <div class="platform">🐱 LeetCode</div>
       <div class="stats"></div>
-      <canvas id="lcChart" width="400" height="200"></canvas>
+      <canvas id="lcChart"></canvas>
     </div>
-
-    <!-- Codeforces Card -->
-    <div class="card" id="codeforces">
-      <div class="platform">🏁 Codeforces</div>
-      <div class="stats"></div>
-      <canvas id="cfChart" width="400" height="200"></canvas>
-    </div>
+  </div>
+  <div class="export-buttons">
+    <button onclick="downloadCSV()">📄 Export CSV</button>
+    <button onclick="downloadPDF()">🧾 Export PDF</button>
   </div>
 
   <script src="app.js"></script>
 </body>
-
 </html>

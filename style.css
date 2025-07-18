@@ -1,68 +1,129 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
-  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin: 0;
   text-align: center;
+  color: #212121;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
-  color: #333;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #2c3e50;
 }
 
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.theme-toggle:hover {
+  background-color: #2980b9;
+}
 
 .form-group {
-  margin: 20px 0;
-  
+  margin-bottom: 25px;
 }
-
 input {
-  padding: 10px;
-  width: 200px;
-  margin: 5px;
+  padding: 12px;
+  width: 240px;
+  margin: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 1em;
 }
-
 button {
-  padding: 10px 20px;
-  background-color: #2b6777;
+  padding: 12px 22px;
+  background-color: #2ecc71;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #27ae60;
 }
 
 .tracker-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-
+  flex-wrap: wrap;
+  gap: 25px;
 }
-
-
 .card {
   background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  flex: 1 1 300px;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  flex: 1 1 400px;
   max-width: 500px;
   text-align: left;
+  transition: background-color 0.3s, color 0.3s;
 }
-
 .platform {
-  font-size: 1.4em;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 12px;
   color: #2b6777;
-  margin-bottom: 10px;
 }
-
 .stats {
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
+  word-wrap: break-word;
 }
-
 canvas {
   width: 100% !important;
   max-height: 300px;
-  margin-top: 15px;
+  margin-top: 20px;
+}
+
+.export-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.export-buttons button {
+  background-color: #34495e;
+}
+.export-buttons button:hover {
+  background-color: #2c3e50;
+}
+
+
+
+/* Dark theme */
+.dark-theme {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+.dark-theme .card {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+.dark-theme input,
+.dark-theme button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+.dark-theme .platform {
+  color: #03dac6;
+}
+.dark-theme .profile-info a {
+  color: #4fc3f7;
 }

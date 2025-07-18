@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CP Tracker - LeetCode & Codeforces</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <h1>📊 Competitive Programming Tracker</h1>
+
+  <div class="form-group">
+    <input type="text" id="leetcodeInput" placeholder="LeetCode Username" />
+    <input type="text" id="codeforcesInput" placeholder="Codeforces Username" />
+    <button onclick="loadStats()">Get Stats</button>
+  </div>
+
+  <div class="tracker-section">
+    <!-- LeetCode Card -->
+    <div class="card" id="leetcode">
+      <div class="platform">🐱 LeetCode</div>
+      <div class="stats"></div>
+      <canvas id="lcChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Codeforces Card -->
+    <div class="card" id="codeforces">
+      <div class="platform">🏁 Codeforces</div>
+      <div class="stats"></div>
+      <canvas id="cfChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

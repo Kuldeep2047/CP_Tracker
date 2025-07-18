@@ -82,7 +82,7 @@ function loadStats() {
   if (codeforcesUser) {
     document.querySelector("#codeforces .stats").innerText = "Fetching records...";
 
-    const cfUrl = `https://codeforces.com/api/user.info?handles=${codeforcesUser}`;
+    const cfUrl = `/api/codeforces?handle=${codeforcesUser}`;
 
     fetch(cfUrl)
       .then(res => res.json())
@@ -105,7 +105,7 @@ function loadStats() {
         `;
 
 
-        fetch(`https://codeforces.com/api/user.rating?handle=${codeforcesUser}`)
+        fetch(`/api/codeforces?handle=${codeforcesUser}&type=rating`);
         fetch(ratingUrl)
           .then(res => res.json())
           .then(ratingData => {
@@ -157,7 +157,7 @@ function loadStats() {
         document.querySelector("#codeforces .stats").innerText = "Error fetching Codeforces data.";
         if (cfChartInstance) {
           cfChartInstance.destroy();
-          
+
           cfChartInstance = null;
         }
       });
